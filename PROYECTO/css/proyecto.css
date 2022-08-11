@@ -1,0 +1,161 @@
+/*Aspectos generales del sitio*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+/*Fondo del sitio*/
+
+    background-image: url(../media/FONDO/background-1044837.jpg);
+    max-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+/*Estilo de texto*/
+
+    font-family: 'Raleway';
+}
+
+/*Header y footer*/
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 5px 5px 5px 5px;
+    overflow: hidden;
+    background-color: #3C1B43;       
+}
+
+footer{
+    padding: 25px 25px 25px 25px;
+    margin-bottom: 0px;
+    background-color: #3C1B43;
+}
+
+/*Aspectos del index*/
+
+.letrasLink{
+    font-size: 1rem;
+    font-weight: bold;
+    list-style: none;
+}
+
+#cv{
+    grid-area: cv;
+}
+
+#portfolio{
+    grid-area: portfolio;
+}
+
+#bio{
+    grid-area: bio;
+}
+
+#contact{
+    grid-area: contact;
+}
+
+/*Diseño responsive*/
+
+@media screen and (max-width: 767px) {
+    .menuDeNavegacion{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "cv portfolio" "bio contact";
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menuDeNavegacion {
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #cv, #bio{
+        padding-top: 25px;
+        padding-bottom: 20%;
+        align-items: baseline;
+    }
+    #portfolio, #contact{
+        padding-bottom: 25px;
+        padding-top: 20%;
+        align-items: baseline;
+    }
+}
+
+/*Aspectos del Currículum*/
+
+.curriculum{
+    font-size: large;
+    color: darkblue;
+}
+
+#scrollLink{
+    display: flex;
+    flex-direction: row;
+    max-height: fit-content;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+/*Aspectos del portfolio*/
+
+#portfolioTitle{
+    display: inline-block;
+    position: sticky;
+    color: darkblue;
+    padding: 3px 3px 3px 3px;
+    margin: 3px 3px 3px 3px;
+}
+
+#flexPortfolio{
+    display: flex;
+    flex-direction: row;
+    max-height: fit-content;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+    color: darkblue;
+    font-size: larger;
+}
+
+/*Aspectos del Sobre mí*/
+
+
+
+.aboutMe{
+    display: block;
+    padding: 3px 3px 3px 3px;
+    margin: 5px 5px 5px 5px;
+    color: darkblue;
+    font-size: large;
+    text-align: end;
+}
+
+/*Aspectos del Contacto*/
+
+.contacto{
+    display: block;
+    color: darkblue;
+    font-size: larger;
+}
